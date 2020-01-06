@@ -87,7 +87,7 @@ double hamacher_tnorm(double x, double y, double p) {
 }
 
 double frank_tnorm(double x, double y, double p) {
-  assert((p > 0.0) && (p != 0.0));
+  assert((p > 0.0) && (p != 1.0));
   check(x, y);
   return log(1.0 + (pow(p, x) - 1.0) * (pow(p, y) - 1.0) / (p - 1.0)) / log(p);
 }

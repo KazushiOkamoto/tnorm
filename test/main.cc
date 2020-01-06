@@ -71,7 +71,10 @@ int main(int argc, char **argv) {
     test(schweizer2_tnorm, schweizer2_tconorm, p, points, "schweizer2 tnorm & tconorm");
     test(schweizer3_tnorm, schweizer3_tconorm, p, points, "schweizer3 tnorm & tconorm");
     test(hamacher_tnorm, hamacher_tconorm, p, points, "hamacher tnorm & tconorm");
-    test(frank_tnorm, frank_tconorm, p, points, "frank tnorm & tconorm");
+
+    if (p != 1.0)
+      test(frank_tnorm, frank_tconorm, p, points, "frank tnorm & tconorm");
+
     test(dombi_tnorm, dombi_tconorm, p, points, "dombi tnorm & tconorm");
   }
 

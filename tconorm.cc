@@ -87,7 +87,7 @@ double hamacher_tconorm(double x, double y, double p) {
 }
 
 double frank_tconorm(double x, double y, double p) {
-  assert((p > 0.0) && (p != 0.0));
+  assert((p > 0.0) && (p != 1.0));
   check(x, y);
   return 1.0 - log(1.0 + (pow(p, 1.0 - x) - 1.0) * (pow(p, 1.0 - y) - 1.0) / (p - 1.0)) / log(p);
 }
